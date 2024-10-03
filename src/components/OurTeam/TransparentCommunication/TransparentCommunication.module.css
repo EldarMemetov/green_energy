@@ -1,0 +1,117 @@
+.transparentSection {
+  padding: 60px 20px;
+  background-color: #a8a0a0; /* Нейтральный фон */
+}
+
+.centeredHeader {
+  text-align: center;
+  margin-bottom: 40px; /* Пространство под заголовком */
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Блок с контентом */
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.textContainer {
+  flex: 1;
+  padding-left: 40px;
+  animation: fadeInText 1s ease-in-out forwards;
+}
+
+.imageContainer {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+  animation: fadeInImage 1.5s ease-in-out forwards;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Анимации */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    padding-left: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+}

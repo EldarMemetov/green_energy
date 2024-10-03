@@ -1,0 +1,24 @@
+.logoList {
+  display: flex;
+  align-items: center;
+}
+
+.greenText {
+  font-size: 18px;
+  background: linear-gradient(135deg, #6de1b2, #00ff55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.sunContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunImage {
+  width: 40px;
+  height: 40px;
+}

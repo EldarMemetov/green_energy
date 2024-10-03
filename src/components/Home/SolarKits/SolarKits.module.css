@@ -1,0 +1,166 @@
+.sectionKits {
+  background-color: azure;
+}
+
+/* Стили для основного заголовка */
+.solarTitle {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Стили для описания раздела */
+.solarDescription {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Стили для списка продуктов */
+.solarProductList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  padding-bottom: 50px;
+}
+
+/* Стили для элемента списка */
+.solarProductItem {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-height: 700px; /* Обеспечивает равномерное распределение высоты */
+}
+
+/* Стили для изображений */
+.solarImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Стили для подзаголовков каждого продукта */
+.solarProductTitle {
+  font-size: 22px;
+  color: #1d1d1d;
+  margin-bottom: 10px;
+}
+
+/* Стили для описания каждого продукта */
+.solarProductDescription {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1; /* Это позволит элементу занимать оставшееся пространство */
+}
+
+/* Стили для кнопки */
+.solarButton {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.solarButton:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+.solarButton:active {
+  transform: scale(1.1);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Центрирует кнопку */
+  margin-top: auto; /* Отодвигает кнопку вниз в пределах flex-контейнера */
+}
+
+/* Стили для Tooltip */
+.solarProductItem {
+  position: relative;
+}
+
+.solarProductItem:hover .solarTooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solarTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* Адаптивная верстка под мобильные устройства */
+@media (min-width: 600px) {
+  .solarProductList {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .solarProductItem {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .solarProductDescription {
+    font-size: 16px;
+  }
+
+  .solarButton {
+    font-size: 1.1rem;
+  }
+}
+
+/* Адаптивная верстка под планшеты и компьютеры */
+@media (min-width: 1024px) {
+  .solarTitle {
+    font-size: 3rem;
+  }
+
+  .solarDescription {
+    font-size: 1.3rem;
+    max-width: 800px;
+  }
+
+  .solarProductTitle {
+    font-size: 2rem;
+  }
+
+  .solarProductDescription {
+    font-size: 18px;
+  }
+
+  .solarButton {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+}
