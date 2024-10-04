@@ -1,0 +1,139 @@
+.detectionSection {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #939090;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInContent 1.5s ease forwards; /* Анимация появления */
+}
+
+.textContainer {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.servicesList {
+  list-style: none;
+  padding: 0;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-30px); /* Сдвиг влево */
+  animation: fadeInService 0.8s ease forwards;
+}
+
+.serviceText {
+  font-size: 1.2rem;
+  margin-left: 15px;
+  color: #f9f9f9;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  animation: spin 8s linear infinite;
+}
+
+.imageContainer {
+  max-width: 600px;
+  flex-shrink: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: slideInRight 1.5s ease forwards; /* Анимация появления справа */
+}
+
+/* Анимации */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInService {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInContent {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .textContainer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+}

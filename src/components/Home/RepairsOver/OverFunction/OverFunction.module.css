@@ -1,0 +1,108 @@
+.repairSection {
+  background-image: url("../RepairsOverPhoto/imageBig.png"); /* Фоновое изображение */
+  background-size: cover;
+  background-position: center;
+  height: 500px; /* Высота фонового изображения */
+  position: relative;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Легкое затемнение фона */
+  z-index: 1;
+}
+
+.repairContainer {
+  position: relative;
+  z-index: 2; /* Контент поверх затемнения */
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачная черная рамка */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px; /* Ширина контейнера */
+  display: flex;
+  flex-direction: column; /* Вертикальная колонка по умолчанию */
+  align-items: center;
+  text-align: center; /* Центрирование текста */
+}
+
+.repairContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Размещаем текст и изображение справа */
+  flex-direction: column; /* Вертикальное расположение для мобильных */
+}
+
+.repairImage {
+  max-width: 200px; /* Размер изображения лампы */
+  height: auto;
+  margin-top: 20px; /* Отступ сверху на мобильных */
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.repairTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.repairDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .repairContainer {
+    flex-direction: row; /* Горизонтальное расположение на больших экранах */
+    text-align: left;
+    max-width: 900px; /* Увеличен контейнер на больших экранах */
+  }
+
+  .repairContent {
+    flex-direction: row; /* Текст и изображение располагаются горизонтально */
+  }
+
+  .repairImage {
+    margin-top: 0; /* Убираем отступы на больших экранах */
+    margin-left: 20px; /* Отступ слева для изображения */
+  }
+
+  .repairTitle {
+    font-size: 3rem;
+  }
+
+  .repairDescription {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .repairContainer {
+    max-width: 100%; /* Ширина контейнера на 100% экрана */
+    padding: 15px; /* Уменьшение отступов на мобильных */
+  }
+
+  .repairTitle {
+    font-size: 2rem; /* Меньший заголовок на маленьких экранах */
+  }
+
+  .repairDescription {
+    font-size: 1.1rem; /* Меньший текст на мобильных */
+  }
+
+  .repairImage {
+    max-width: 150px; /* Уменьшение размера изображения на мобильных */
+  }
+}

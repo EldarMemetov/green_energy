@@ -1,0 +1,75 @@
+/* Основная секция */
+.varietySection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  position: relative;
+}
+
+/* Контейнер для изображения */
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.solarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Контейнер для аккордеона */
+.accordionContainer {
+  width: 50%;
+  padding: 70px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стиль для заголовков и контента */
+.glassFilmWrapper,
+.glassGlassWrapper,
+.fullBlackWrapper {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #27ae60; /* Use a distinct border color */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Shared content */
+.sharedContent {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  max-height: 0; /* Initially hide content */
+  overflow: hidden; /* Hide overflow for smooth transition */
+  opacity: 0; /* Initially hidden */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Add transition for max-height and opacity */
+}
+
+/* When content is visible */
+.sharedContent.visible {
+  max-height: 200px; /* Adjust as needed */
+  opacity: 1; /* Fully visible */
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .accordionContainer {
+    width: 100%;
+    padding: 10px;
+    margin-left: 0;
+  }
+}
