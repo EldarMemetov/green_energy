@@ -1,3 +1,10 @@
+/* Contact.module.css */
+
+body {
+  background: linear-gradient(135deg, #f0f4f8, #e1e9ee);
+  font-family: "Arial", sans-serif;
+}
+
 .contactSection {
   width: 100%;
   min-height: 100vh;
@@ -60,6 +67,15 @@
 .contactInfoItem {
   text-align: center;
   margin-bottom: 30px;
+  padding: 15px; /* Отступ внутри блока */
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+  transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.contactInfoItem:hover {
+  transform: translateY(-5px); /* Подъем блока при наведении */
 }
 
 .contactInfoItem h3 {
@@ -84,11 +100,12 @@
 
 .formContainer {
   background: rgba(255, 255, 255, 0.2);
-  padding: 40px;
+  padding: 40px; /* Основное значение отступа */
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Анимации */
 @keyframes bounce {
   0%,
   100% {
@@ -99,6 +116,7 @@
   }
 }
 
+/* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {
   .heading {
     font-size: 2.5rem;
@@ -108,7 +126,12 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .formContainer {
+    padding: 10px; /* Уменьшенный отступ для мобильных */
+  }
 }
+
 .link {
   color: #00ff88;
   text-decoration: none;
