@@ -1,13 +1,11 @@
+import Contact from "../Contact/Contact";
+import Notification from "../Notification/Notification";
+
 export function ContactUsAll() {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <p>ContactUsAll</p>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <main>
+      <Contact />
+      <Notification.Container />
+    </main>
   );
 }

@@ -1,0 +1,120 @@
+.contactSection {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover; /* Масштабирование фонового изображения */
+  background-position: center; /* Центровка фонового изображения */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  background-attachment: fixed; /* Эффект параллакса для фонового изображения */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Полупрозрачная подложка */
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #7aed7a, #089a17);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.motivationalText {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.contactInfoItem {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contactInfoItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contactInfoItem p {
+  font-size: 1.2rem;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00ff88;
+  animation: bounce 2s infinite;
+}
+
+.formWrapper {
+  width: 100%;
+}
+
+.formContainer {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.link {
+  color: #00ff88;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #00ccff;
+}
